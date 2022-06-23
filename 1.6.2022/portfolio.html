@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          /* color: thay đổi màu chữ 
+          vd: (red, #BF0F07, rgb(191, 15, 7))
+            background-color: thay đổi màu nền
+            ctrl + space: chọn màu
+            font-family:  Verdana, Geneva, Tahoma, sans-serif: thay đổi font chữ của trang web thành sans-serif
+            letter-spacing: 2px: thay đổi khoảng cách giữa các kí tự
+            border
+            border-style
+            border-width
+            boder-color
+            width
+            height
+            margin
+            padding
+            */
+        body {
+            background-color: rgb(192, 222, 144);
+            font-family:  Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        h1 {
+            color: #E047F9;
+            background-color: aliceblue;    
+            border-radius: 10px;
+            width:  fit-content;
+            padding: 10px;
+
+            margin-left: 30%;
+        }
+
+        h2 {
+            color: rgb(245, 177, 6);
+            background-color: rgb(228, 75, 106);
+            letter-spacing: 5px;
+        }
+        /* thẻ id: dùng xác định 1 id duy nhất -> dùng dấu #
+        thẻ class: dùng xác định một hoặc nhiều tên lớp cho phần tử HTML -> dùng dấu .
+        */
+        #general {
+            /*text-decoration: underline: gạch chân  */
+            text-decoration: underline;
+        }
+        .italic {
+            /* font-style: chữ nghiêng */
+            font-style: italic;
+        }
+        /* border-radius: bo tròn góc element bất kì*/
+        img {
+            /* border-width: 2px;
+            border-style: solid;
+            border-color: brown; */
+            border: 10px     solid black;
+            border-radius: 40px;
+            margin-left: 35%;
+        }
+        table, th,td {
+            border: 2px dotted darkblue;
+            border-collapse: collapse;
+            
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- Heading: h1, h2, h3, h4, h5, ... -->
+    <h1>Nguyen Cong Thien's Portfolio</h1>
+
+    <!-- img: hiển thị hình ảnh  (./: link ảnh trong folder)-->
+    <!-- height, width : dùng để xác định chiều rộng & chiều cao của trình xem phim ảnh -->
+    <img src="./151220915_1057952861373401_5815986421548153499_n.jpg" alt="" height="500" width="auto"> <br>
+    <!-- video: dùng để tạo một "trình xem phim" cho trang web -->
+    <!-- controls: xác định việc "thanh điều khiển của trình xem phim sẽ được hiển thị" -->
+    <video src="./y2mate.com - How to Give a 60 Second SelfIntroduction Presentation_1080p.mp4" controls height="600"></video>
+<!-- hr: tạo line ngăn cách dòng -->
+    <hr>
+<!-- h: tiêu đề quan trọng in đậm theo kích thước h1>h2>h3>h4>... -->
+<!-- p: nội dung paragraph -->
+    <h2 class="italic" id="general">General Information</h2>
+
+    <h3 class="italic">Name</h3>
+    <p><b>Nguyễn Công Thiện</b></p>
+    
+    <h3 class="italic">Age</h3>
+    <p><i>18</i></p>
+
+    <h3 class="italic">Date of Birth</h3>
+    <p><mark>26/07/2022</mark></p>
+
+    <h3 class="italic">Address</h3>
+    <p><ins>Hue City</ins></p>
+
+    <h3 class="italic">Phone Number</h3>
+    <p><del>0123456789</del></p>
+
+    <h3 class="italic">Email</h3>
+    <p>thiennguyen@gmail.com</p>
+
+    <h3 class="italic">Gender</h3>
+    <p><small>Male</small></p>
+
+    <h3 class="italic">Github link</h3>
+    <p>https://github.com/NgCThien26</p>
+
+    <hr>
+
+    <h2>Work Experience</h2>
+<!-- ol: danh sách có thứ tự 1. 2. 3. -->
+    <ol>
+        <!-- hiển thị các thành phần trong danh sách -->
+        <li>Tutor</li>
+        <li>Software Engineer</li>
+        <li>Intructor</li>
+    </ol>
+
+    <hr>
+
+    <h2>Favorite Musics</h2>
+<!-- ul: danh sách k có thứ tự o o o -->
+    <ul>
+        <!-- iframe: chèm link iframe video vào - cách lấy iframe:vào video - chia sẻ - nhúng - copy iframe & ctrl c vào cạnh tên thành phần  -->
+        <!-- br: dùng để xuống hàng trong cùng 1 đoạn -->
+        <li>
+            Về Nghe Mẹ Ru  <br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/msR8HTOPjKY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+        <br>
+        <li>
+            Tri Kỷ <br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7K3tW1tWIro" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+        <br>
+        <li>
+            Tan <br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-dr3oKQGjAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </li>
+
+    </ul>
+
+    <hr>
+
+    <h2>Contact</h2>
+    <!-- a(anchor): được dùng để tạo link, tức là các đường dẫn của một website nào đó trên internet -->
+    <!-- href: hyperlink refenrence -->
+    <a href="https://learn.codegym.vn/members/lam-long/">Visit my profile</a>
+
+    <h2>My Projects</h2>
+    <table>
+        <tr>
+            <th>No.</th>
+            <th>Project Name</th>
+        </tr>
+        <tr>
+            <td>1.</td>
+            <td>Portfolio name</td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>Twitter Page</td>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>Cat ID Registration Page</td>
+        </tr>
+    </table>
+</body>
+</html>
