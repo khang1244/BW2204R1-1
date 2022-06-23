@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .option {
+        background-color: #fff;
+      }
+      label {
+        font-weight: bold;
+      }
+      div.option-selected {
+        background-color: #fff7c0;
+        padding:5px;
+      }
+      #change-display {
+        display: none;
+      }
+      table,tr,td {
+        border: 1px solid rgb(190, 186, 186);
+        border-collapse: collapse;
+      }
+      tr:nth-child(odd){
+        background-color: rgba(205, 200, 200, 0.986);
+      }
+    </style>
+  </head>
+  <body>
+    <form action="submit.php">
+      <h2>Market Research Survey</h2>
+      <p>Please take a few moments to complete this satisfaction survey.</p>
+      <div class="option" onclick="select(event)">
+        <label class="section" for="age-range">What is your age range? </label>
+        <br />
+        <select name="age-range">
+          <option value="18-24">18-24</option>
+          <option value="25-34">25-34</option>
+          <option value="35-50">35-50</option>
+          <option value="50+">50+</option>
+        </select>
+      </div>
+      <br />
+      <div class="option" onclick="select(event)">
+        <label class="section" for="income-range"
+          >What is your yearly income range?
+        </label>
+        <br />
+        <select name="income-range">
+          <option value="0-$25,000">0-$25,000</option>
+          <option value="$25,001-$50,000">$25,001-$50,000</option>
+          <option value="$50,001-$100,000">$50,001-$100,000</option>
+          <option value="$100,000+">$100,000+</option>
+        </select>
+      </div>
+      <br />
+      <div class="option" onclick="select(event)">
+        <label for="gender" class="section">Gender Identity </label>
+        <br />
+        <input type="radio" name="gender" value="male" />Male
+        <br />
+        <input type="radio" name="gender" value="female" />Female
+        <br />
+        <input type="radio" name="gender" value="nonbinary" />Nonbinary
+        <br />
+        <input type="radio" name="gender" value="other" onclick="change()"/>Other
+        <br />
+        <input type="text" name="gender" id="input-gender" onclick="change()"/>
+        <br />
+        <div id="change-display">
+            Maxinum of <b>250</b> character. <i>&nbsp;&nbsp;&nbsp;Currently Used:</i><b><span id="count">0</span></b
+            ><i>character</i>
+        </div>
+      </div>
+      <br>
+      <div class="option" onclick="select(event)">
+        <label class="section" for="products"
+          >Which of the following products have your purchased in the last 2
+          months. Please check all that apply.
+        </label>
+        <br />
+        <input type="checkbox" name="products" value="product 1" />Product1
+        <br />
+        <input type="checkbox" name="products" value="product 2" />Product2
+        <br />
+        <input type="checkbox" name="products" value="product 3" />Product3
+      </div>
+      <br />
+      <div class="option" onclick="select(event)">
+        <label for="purchase" class="section"
+          >How often would you use our new product?
+        </label>
+        <br />
+        <input type="checkbox" name="purchase" value="daily" id="" />Daily
+        <br />
+        <input type="checkbox" name="purchase" value="week" id="" />Week
+        <br />
+        <input type="checkbox" name="purchase" value="month" id="" />Month
+      </div>
+      <br>
+      <div class="option" onclick="select(event)">
+        <label for="pay" class="section">What would you pay new product</label>
+        <br />
+        <p>
+          $
+          <input type="number" name="dollars" id="pay-dollars" width="100px" />
+          .
+          <input type="text" name="cent" id="pay-cents" />
+        </p>
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dollars&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cents
+        </p>
+      </div>
+      <div class="option" onclick="select(event)">
+        <label for="feature" class="section"
+          >What features would you like to see in new product.</label
+        >
+        <br />
+        <textarea name="feature" id="" cols="80" rows="5"></textarea>
+      </div>
+      <br />
+      <br />
+      <div class="option" onclick="select(event)">
+        <label for="rate"
+          >Please rate your level of agreement with the following
+          statement</label
+        >
+        <br>
+        <br>
+        <table">
+          <tr>
+            <td></td>
+            <td>Strongly Disagree</td>
+            <td>Disagree</td>
+            <td>Agree</td>
+            <td>Strongly Agree</td>
+          </tr>
+          <tr>
+            <td>Out product are priced fairly.</td>
+            <td>
+              <input
+                type="radio"
+                name="Out product are priced fairly"
+                value="1"
+              />
+              <br />
+              1
+            </td>
+            <td>
+              <input
+                type="radio"
+                name="Out product are priced fairly"
+                value="2"
+              />
+              <br />
+              2
+            </td>
+            <td>
+              <input
+                type="radio"
+                name="Out product are priced fairly"
+                value="3"
+              />
+              <br />
+              3
+            </td>
+            <td>
+              <input
+                type="radio"
+                name="Out product are priced fairly"
+                value="4"
+              />
+              <br />
+              4
+            </td>
+          </tr>
+          <tr>
+            <td>Out product are high quality.</td>
+            <td>
+              <input
+                type="radio"
+                name="Out product are high quality"
+                value="1"
+              />
+              <br />
+              1
+            </td>
+            <td>
+              <input
+                type="radio"
+                name="Out product are high quality"
+                value="2"
+              />
+              <br />
+              2
+            </td>
+            <td>
+              <input
+                type="radio"
+                name="Out product are high quality"
+                value="3"
+              />
+              <br />
+              3
+            </td>
+            <td>
+              <input
+                type="radio"
+                name="Out product are high quality"
+                value="4"
+              />
+              <br />
+              4
+            </td>
+          </tr>
+          <tr>
+            <td>You would recommend our product to a friend or coworker.</td>
+            <td>
+              <input
+                type="radio"
+                name="You would recommend our product to a friend or coworker"
+                value="1"
+              />
+              <br />
+              1
+            </td>
+            <td>
+              <input
+                type="radio"
+                name="You would recommend our product to a friend or coworker"
+                value="2"
+              />
+              <br />
+              2
+            </td>
+            <td>
+              <input
+                type="radio"
+                name="You would recommend our product to a friend or coworker"
+                value="3"
+              />
+              <br />
+              3
+            </td>
+            <td>
+              <input
+                type="radio"
+                name="You would recommend our product to a friend or coworker"
+                value="4"
+              />
+              <br />
+              4
+            </td>
+          </tr>
+        </table>
+      </div>
+      <br />
+      <input type="submit" value="Submit" id="btn" />
+      <br />
+    </form>
+  </body>
+  <script>
+    function select(e) {
+      const selected = document.querySelectorAll(".option");
+      selected.forEach(function (el) {
+        el.classList.remove("option-selected");
+      });
+      e.target.classList.add("option-selected");
+    }
+    function change(){
+      const show = document.getElementById('change-display');
+      show.style.display = 'block';
+    }
+    let result = document.getElementById('change-display');
+    let input = document.getElementById('input-gender');
+    let increment = document.getElementById('count');
+    var count = 0;
+    input.addEventListener('keydown',function(event){
+            if(event.keyCode==8 && count>0){
+              count--;
+            } else if(count<250){
+              count++;
+            }
+            increment.innerText= count;
+      })
+  </script>
+</html>
