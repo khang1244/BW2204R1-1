@@ -46,3 +46,7 @@ footer {
     background-color: forestgreen;
     grid-area: footer;
 }
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
